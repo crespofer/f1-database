@@ -1,9 +1,12 @@
 import React from "react";
+import Header from "../components/Header";
 
 function SearchPageResults(){
 
     return (
-        <div>Search Page</div>
+        <div>
+            <Header></Header>
+        </div>
     );
 }
 

@@ -1,0 +1,46 @@
+.logo-image{
+    position: fixed;
+    left: 25px;
+    width: 200px;
+    height: 200px;
+    top: -50px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+p {
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+    position: absolute;
+    left: 200px;
+    top: -25px;
+    color: white;
+}
+
+.drivers{
+    position: relative;
+    background-color: transparent;
+    mix-blend-mode: multiply;
+    clip-path: inset(6px 6px 6px 6px);
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    top: -80px; 
+}
+
+.git-logo{
+    position: absolute;
+    padding: 5px;
+    top: 20px;
+    right: 70px;
+    width: 150px;
+    height: 60px;
+    border-radius: 25px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.git-logo:hover{
+    transform: scale(1.1);
+}
