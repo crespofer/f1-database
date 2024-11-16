@@ -1,5 +1,5 @@
 .logo-image{
-    position: fixed;
+    position: absolute;
     left: 25px;
     width: 200px;
     height: 200px;
@@ -22,7 +22,7 @@ p {
     position: relative;
     background-color: transparent;
     mix-blend-mode: multiply;
-    clip-path: inset(6px 6px 6px 6px);
+    clip-path: inset(7px 7px 7px 7px);
     display: block;
     margin-right: auto;
     margin-left: auto;
