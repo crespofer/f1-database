@@ -20,3 +20,83 @@
     left: 8px;
     top: -140px;
 }
+
+.error{
+    color: white;
+    font-size: xx-large;
+    white-space: nowrap;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.error button{
+    font-size: medium;
+    background-color: red;
+    color: white;
+    width: 200px;
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 25px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.error button:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.select-container{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    position: relative;
+    top: -90px;
+}
+
+select {
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    background-color: red;
+    font-size: medium;
+    width: 200px;
+    border-radius: 25px;
+    text-align: center;
+    padding: 5px;
+}
+
+.search-button{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: medium;
+    background-color: red;
+    color: white;
+    width: 100px;
+    border-radius: 25px;
+    padding: 5px;
+    position: absolute;
+    bottom: 25%;
+    left: 46%;
+
+}
+
+.search-button:hover{
+    cursor: pointer;
+}
+
+.error-message{
+    font-size: 15px;
+    width: 300px;
+    position: absolute;
+    text-align: center;
+    top: 75%;
+    left: 38%;
+}
+
+.loading{
+    width: 25px;
+    position: absolute;
+    bottom: 32%;
+    left: 49%;
+}
