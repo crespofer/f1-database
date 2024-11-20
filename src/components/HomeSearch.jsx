@@ -1,4 +1,5 @@
 import React, {useState, useEffect, useRef} from "react"
+import { useNavigate } from "react-router-dom";
 import './HomeSearch.css'
 import loadingGif from '../assets/loading.gif'
 
@@ -14,6 +15,7 @@ function HomeSearch(){
 
     const abortControllerRef = useRef(null);
     const BASE_URL = `https://ergast.com/api/f1/${chosenYear}`;
+    const navigate = useNavigate();
 
     var yearsList = []
     for(let i = 2023;i>=1950;i--) // populates array with list of valid years(1950-2023)
@@ -50,6 +52,7 @@ function HomeSearch(){
         }
         else{
             setErrorMessage(false);
+            navigate(`/results/${chosenYear}/${chosenCircuitId}`);
         }
         
     }
