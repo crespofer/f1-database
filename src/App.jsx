@@ -11,7 +11,7 @@ const router = createBrowserRouter([
   errorElement: <NotFoundPage/>,
 },
 {
-  path: '/results/:year/:circuit',
+  path: '/results/:year/:circuitId',
   element: <SearchPageResults/>,
 },
 ]);
