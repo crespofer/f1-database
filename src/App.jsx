@@ -13,6 +13,7 @@ const router = createBrowserRouter([
 {
   path: '/results/:year/:circuitId',
   element: <SearchPageResults/>,
+  errorElement: <NotFoundPage/>,
 },
 ]);
 
