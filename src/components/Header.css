@@ -26,14 +26,14 @@ p {
     display: block;
     margin-right: auto;
     margin-left: auto;
-    top: -80px; 
+    top: -5em; 
 }
 
 .git-logo{
     position: absolute;
-    padding: 5px;
-    top: 20px;
-    right: 70px;
+    padding: 0.5em;
+    top: 1.2em;
+    right: 5%;
     width: 150px;
     height: 60px;
     border-radius: 25px;

@@ -5,7 +5,7 @@ import './Header.css';
 
 function Header(){
     return (
-        <div>
+        <div className="header">
             <img className="logo-image"src={f1Logo} alt=""/>
             <p>F1 Database</p>
             <a href="https://github.com/crespofer/f1-database"><img className="git-logo" src={gitLogo} alt=""/></a>
