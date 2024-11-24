@@ -1,0 +1,27 @@
+.results-table {
+
+    border-collapse: collapse;
+    margin: 20px auto;
+    margin-top: -10px;
+    font-size: 2em;
+    min-width: 400px;
+    /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); */
+}
+
+.results-table thead tr {
+    color: white;
+    text-align: left;
+    font-weight: bold;
+}
+
+.results-table thead th {
+    padding: 50px;
+}
+
+.results-table td {
+    padding: 12px 15px;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
