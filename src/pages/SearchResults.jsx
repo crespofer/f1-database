@@ -5,6 +5,7 @@ import RaceDescription from "../components/RaceDescription";
 import NotFoundPage from "./NotFoundPage.jsx"
 import loadingGif from "../assets/loading.gif"
 import "./SearchResults.css"
+import ChecoCelebration from "../components/ChecoCelebration";
 
 function SearchPageResults(){
     const { year, circuitId } = useParams();
@@ -12,6 +13,7 @@ function SearchPageResults(){
     const [raceInfo, setRaceInfo] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
+    const [isChecoFirst, setIsChecoFirst] = useState(false);
 
     const abortControllerRef = useRef(null);
     const URL = `https://ergast.com/api/f1/${year}/circuits/${circuitId}/results.json`;
@@ -29,6 +31,10 @@ function SearchPageResults(){
 
                 setRaceInfo(raceResults.MRData.RaceTable.Races[0]);
                 setResults(raceResults.MRData.RaceTable.Races[0].Results); // stores drivers results
+
+                if(raceResults.MRData.RaceTable.Races[0].Results[0].Driver.driverId === "perez"){
+                    setIsChecoFirst(true);
+                }
             } catch(e) {
                 if(e.name === "AbortError"){
                     console.log("Aborted");
@@ -44,6 +50,7 @@ function SearchPageResults(){
     }, [year, circuitId]);
 
     if(error){
+        console.log(error);
         return <NotFoundPage/>
     }
 
@@ -55,7 +62,8 @@ function SearchPageResults(){
         <div>
             <Header></Header>
             <RaceDescription raceName={raceInfo.raceName} round={raceInfo.round} season={raceInfo.season} date={raceInfo.date} circuitName={raceInfo.Circuit.circuitName} country={raceInfo.Circuit.Location.country}/>
-            <table className="results-table">
+            {isChecoFirst && <ChecoCelebration/>}
+            <table className={`results-table ${isChecoFirst ? 'checo-celebration' : ''}`}>
                 <thead>
                     <tr>
                         <th>Position</th>
@@ -68,7 +76,7 @@ function SearchPageResults(){
                 <tbody>
                     {
                         results.map(result => (
-                            <tr>
+                            <tr key={result.Driver.driverId}>
                                 <td>{result.position}</td>
                                 <td>{result.Driver.givenName} {result.Driver.familyName}</td>
                                 <td>{result.Constructor.name}</td>

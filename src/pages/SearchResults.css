@@ -7,6 +7,10 @@
     min-width: 400px;
 }
 
+.results-table.checo-celebration{
+    margin-top: 80px;
+}
+
 .results-table thead tr {
     color: white;
     text-align: left;
