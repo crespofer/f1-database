@@ -1,4 +1,5 @@
 .container {
+    margin-top: -20%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -39,28 +40,31 @@
     position: relative;
     left: 10px;
     font-size: medium;
+    left: -44%;
+    padding-left: 80px;
 }
 
 .date {
     position: relative;
-    left: 10px;
+    left: -43.5%;
     font-size: larger;
     color: white;
 }
 
 .round {
     position: relative;
-    left: 10px;
+    left: -46%;
     font-size: larger;
     color: white;
     margin-top: -0.1em;
+
 }
 
 .country {
     font-size: large;
     font-family: 'Times New Roman', Times, serif;
     margin-top: 14.3em;
-    margin-left: 50em;
+    margin-left: 47em;
 }
 
 .line {

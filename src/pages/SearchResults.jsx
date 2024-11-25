@@ -21,8 +21,6 @@ function SearchPageResults(){
             abortControllerRef.current?.abort();
             abortControllerRef.current = new AbortController();
 
-            //setIsLoading(true);
-
             try{
                 const response = await fetch(URL, {
                     signal: abortControllerRef.current?.signal,
@@ -45,16 +43,12 @@ function SearchPageResults(){
 
     }, [year, circuitId]);
 
-    function whatever(){
-        console.log(results);
-    }
-
     if(error){
         return <NotFoundPage/>
     }
 
     if(!raceInfo){
-        return <div><img src={loadingGif} alt="Loading..."/></div>
+        return <div><img className="loading-gif" src={loadingGif} alt="Loading..."/></div>
     }
 
     return (
@@ -84,7 +78,6 @@ function SearchPageResults(){
                         ))}
                 </tbody>
             </table>
-            {/* <button onClick={whatever}>Click</button> */}
         </div>
     );
 }
